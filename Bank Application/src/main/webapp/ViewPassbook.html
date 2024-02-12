@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View Passbook Form</title>
+	<style>
+	      body
+          {
+               background-image:url('Project Image/Login Image.jpg');
+               background-repeat:no-repeat;
+               background-attachment: fixed;
+               background-size:cover;          
+          }
+		  form
+		  {
+			   display: flex;
+			   flex-direction: column;
+			   align-items: center;
+			   justify-content: center;
+			   margin: 50px auto;
+			   padding: 20px;			
+			   border-radius: 10px;
+			   width: 300px;
+		  }
+		  input[type="text"], input[type="password"]
+		  {
+			   padding: 10px;
+			   margin: 10px 0;
+			   border-radius: 5px;
+			   border: 1px solid #ccc;
+			   width: 100%;
+			   box-sizing: border-box;
+			   font-size: 16px;
+		  }
+		  input[type="submit"]
+		  {
+			   background-color: #4CAF50;
+			   color: #fff;
+			   padding: 10px;
+			   border: none;
+			   border-radius: 5px;
+			   width: 100%;
+			   font-size: 16px;
+			   cursor: pointer;
+		  }
+		  input[type="submit"]:hover
+		  {
+			   background-color: #45a049;
+		  }
+		  h2
+		  {
+			   text-align: center;
+			   margin-bottom: 20px;
+		  }
+		  a
+		  {
+			   background-color:#ff0000;
+			   color: #fff;
+			   text-align: center;
+			   padding: 10px;
+			   border: none;
+			   border-radius: 5px;
+			   width: 100%;
+			   font-size: 16px;
+			   cursor: pointer;
+		  }
+	</style>
+</head>
+<body>
+	<form action="ViewPassbook" method="post">
+		<h2>View Passbook Form</h2>
+		<label>Account No</label>
+		<input type="text" name="accountno" placeholder="Enter Account No" required autofocus>
+		<label>Password</label>
+		<input type="password" name="password" placeholder="Enter password" required>
+		<input type="submit" value="View Passbook"><br>
+		<a href="ForgotPassword.html">Forgot Password</a>
+	</form>
+</body>
+</html>

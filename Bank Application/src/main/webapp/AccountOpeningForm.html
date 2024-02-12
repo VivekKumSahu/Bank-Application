@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Opening Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 190vh;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+		h1
+		{
+		     color:#0000ff;
+		     font-size:30px;
+		     text-align:center;
+		}
+		span
+		{
+             color:#ff0f0f;
+		}
+		.c,a:hover
+        {
+             background-color: #45a049;
+        }
+		.c,a
+        {
+             background-color: #3b5998;
+             color: #fff;
+             padding: 12px 20px;
+             border: none;
+             border-radius: 4px;
+             cursor: pointer;
+             width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form action="NewAccountServlet" method="post">
+        <h1><strong>Account Opening Form</strong></h1>
+        <label>Enter Full Name<span> *</span></label>
+        <input type="text" name="name" size="50" placeholder="Enter Full Name"required autofocus/>
+        <label>Enter Father Name<span> *</span></label>
+        <input type="text" name="father" size="50" placeholder="Enter Father Name"required/>
+	    <label>Aadhaar Card No<span> *</span></label>
+	    <input type="text" name="aadhar" size="50" placeholder="Enter Aadhaar No"required/>
+	    <label>Account Password<span> *</span></label>
+	    <input type="password" name="password" size="50" placeholder="Enter Password"                                                                                      required/>
+		<label>Date Of Birth<span> *</span></label>
+	    <input type="date" name="dob"required/>
+		<label>Contact Number<span> *</span></label>
+	    <input type="text" name="contect" size="50" placeholder="Enter Contact Number"                                                                                     required/>
+		<label>Email Address<span> *</span></label>
+	    <input type="email" name="email" size="50" placeholder="Enter Email Address"                                                                                       required/>
+        <label>Gender<span> *</span></label>
+        <select required name="gender">
+            <option value="M">Male<option/>
+			<option value="F">Female<option/>
+        </select>
+		<label>Occupation<span> *</span></label>
+	    <select required name="occupation">
+            <option value="Student">Student<option/>
+			<option value="Farmer">Farmer<option/>
+			<option value="Businessman">Businessman<option/>
+			<option value="Government Employee">Government Employee<option/>
+			<option value="Other">Other<option/>
+		</select>
+
+		<label>Account Type<span> *</span></label>
+	    <select required name="accounttype">
+            <option value="Savings Account">Savings Account<option/>
+			<option value="Salary Account">Salary Account<option/>
+			<option value="Family Savings Account">Family Savings Account<option/>
+			<option value="Kids Savings Account">Kids Savings Account<option/>
+			<option value="Regular Savings Account ">Regular Savings Account<option/>
+		 </select>
+         <label>Nominee<span> *</span></label>
+	     <select required name="nominee">
+             <option value="Son">Son<option/>
+			 <option value="Daughter">Daughter<option/>
+			 <option value="">Mother<option/>
+			 <option value="Father">Father<option/>
+			 <option value="Wife">Wife<option/>
+             <option value="Husband">Husband<option/>
+		 </select>
+         <label>Permanent Address<span> *</span></label>
+	     <textarea name="address" rows="6" required placeholder="Enter Your Permanent Address Here"></textarea>
+		 <label>Upload Your Photo<span> *</span></label>
+         <input type="file" name="photo" required/>
+		 <input type="submit" value="Submit" class="c"/><br><br>
+         <a href="Main.html">Main page</a>
+    </form>
+</body>
+</html>

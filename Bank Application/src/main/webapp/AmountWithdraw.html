@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Amount Withdraw</title>
+     <style>
+          body
+          {
+               background-image:url('Project Image/amount withdraw.jfif');
+               background-repeat:no-repeat;
+               background-attachment: fixed;
+               background-size:cover;          
+          }
+          form
+          {
+               width:300px;
+               height:100px;	  
+               align-items: center;
+          }
+          div
+          {
+               flex-direction: column;
+               box-align:center;
+               display: flex;
+               align-items: center;
+               border-radius: 5px;
+               box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          }
+          label
+          {
+               font-weight: bold;
+               margin-top: 10px;
+               color:#00ff80;
+          }
+          input
+          {
+               padding: 10px;
+               margin: 5px 0;
+               border-radius: 5px;
+               border: none;
+               width:300px;
+               box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          }
+          .c
+          {
+               padding: 10px;
+               margin-top: 10px;
+               background-color: #4CAF50;
+               color: white;
+               width:150px;
+               border: none;
+               border-radius: 5px;
+               cursor: pointer;
+               transition: background-color 0.3s ease;
+          }
+          .c:hover
+          {
+               background-color: #3e8e41;
+          }
+          a
+		  {
+			   background-color:#ff0000;
+			   color: #fff;
+			   text-align: center;
+			   padding: 10px;
+			   border: none;
+			   border-radius: 5px;
+			   width: 100%;
+			   font-size: 16px;
+			   cursor: pointer;
+		  }
+     </style>
+</head>
+<body>
+    <div>
+       <form action="AmountWithdrawServlet" method="post">	 
+           <label>Account No</label><br>
+           <input type="text" name="accountno" placeholder="Enter Account No" required autofocus><br>
+           <label>Password</label><br>
+           <input type="password" name="password" placeholder="Enter Password" required><br>
+           <label>Amount</label><br>
+           <input type="text" name="amount" placeholder="Enter Amount" required><br>
+           <input type="submit" name="Withdraw" value="Withdraw Amount" class="c">
+           <a href="ForgotPassword.html">Forgot Password</a>  
+       </form>
+    </div>
+</body>
+</html>

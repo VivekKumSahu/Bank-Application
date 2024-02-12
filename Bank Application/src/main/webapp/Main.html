@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Customer Page</title>
+	<style>
+	    a,input
+        {
+             background-color: #3b5998;
+             color: #fff;
+             padding: 12px 20px;
+             border: none;
+             border-radius: 4px;
+             cursor: pointer;
+             width: 100%;
+        }
+        a,input:hover
+        {
+             background-color: #2d4373;
+        }
+        body
+        {
+             background-image:url('Project Image/Main.webp');
+             background-repeat:no-repeat;
+             background-attachment: fixed;
+             background-size:cover;          
+        }	
+	    .slider
+	    {
+             position: relative;
+             width: 350px;
+             margin: 50px auto;
+             perspective: 1000px;
+             padding-top: 120px;
+        }
+        .rotator
+		{
+             position: absolute;
+             left: 0;
+             right: 0;
+             margin: auto;
+             width: 80%;
+             height: 250px;
+             transform-style: preserve-3d;
+             animation: roter 20s linear infinite;
+        }
+	    .items
+		{
+             position: absolute;
+             height: 100%;
+             width: 100%;
+             overflow: hidden;
+             border: 2px solid white;
+        }
+        .items img
+		{
+             height: 100%;
+             width: 100%;
+             transition: all 3s ease;
+        }
+	    .items:hover img
+		{
+             transform: scale(1.1);
+        }
+	    @keyframes roter
+		{
+            from
+		    {
+                 transform: rotateY(0deg);
+            }
+            to
+			{
+                 transform: rotateY(360deg);
+            }
+        }
+	    .items:first-child
+		{
+             transform: rotateY(calc(60deg)) translateZ(300px);
+        }
+        .items:nth-child(2)
+		{
+             transform: rotateY(calc(120deg)) translateZ(300px);
+        }
+        .items:nth-child(3)
+		{
+             transform: rotateY(calc(180deg)) translateZ(300px);
+        }
+        .items:nth-child(4)
+		{
+             transform: rotateY(calc(240deg)) translateZ(300px);
+        }
+        .items:nth-child(5)
+		{
+             transform: rotateY(calc(300deg)) translateZ(300px);
+        }
+        .items:nth-child(6)
+		{
+             transform: rotateY(calc(360deg)) translateZ(300px);
+        }
+	    .rotator:hover
+		{
+             animation-play-state: paused;
+        }
+	</style>
+</head>
+<body>
+<div>
+  <form action="CustomerMainServlet" method="post">
+    <div class="slider">
+        <div class="rotator">
+            <div class="items">	
+                  <input type="submit" name="goto" value="Apply To ATM">
+                  <img src="Project Image/ATM.jpg" alt="items photo" />		   
+            </div>
+            <div class="items">
+                  <input type="submit" name="goto" value="Withdraw">
+                  <img src="Project Image/Withdraw.jpg" />
+            </div>
+            <div class="items">
+                  <input type="submit" name="goto" value="View Passbook">
+                  <img src="Project Image/View Passbook.jpg" alt="items photo" />
+            </div>
+            <div class="items">
+                  <input type="submit" name="goto" value="Open New Account">
+                  <img src="Project Image/Open Account.webp" alt="items photo" />
+            </div>
+            <div class="items">
+                  <input type="submit" name="goto" value="Deposit">
+                  <img src="Project Image/deposit.jpg" />
+            </div>
+            <div class="items">
+                  <input type="submit" name="goto" value="Balance Inquiry">
+                  <img src="Project Image/Balance.jpg" alt="items photo" />
+            </div>
+            <div class="items">
+                  <input type="submit" name="goto" value="View ATM Card Details">
+                  <img src="Project Image/ATM Main Page.jpg" alt="items photo" />
+            </div>
+        </div>
+    </div>
+  </form>
+</div>
+<a href="BankWelcomePage.html">Home Page</a>
+</body>
+</html>
